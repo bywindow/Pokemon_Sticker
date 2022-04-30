@@ -11,3 +11,15 @@ export const mapView = styled.div`
   height: 100%;
   border-radius: 18px;
 `;
+
+export const iwContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  backgroud-color: yellow;
+`;
+
+export const iwText = styled.p`
+  color: black;
+`;

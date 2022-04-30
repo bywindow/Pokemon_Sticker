@@ -27,14 +27,29 @@ const KaKaoMap = ({stores}) => {
     const imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
 
     state.forEach((element) => {
-      var imageSize = new kakao.maps.Size(24, 35);
-      var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
-      var marker = new kakao.maps.Marker({
+      const imageSize = new kakao.maps.Size(24, 35);
+      const markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+      const marker = new kakao.maps.Marker({
         map: map,
         position: element.latlng,
-        title: element.name,
         image: markerImage,
       })
+
+      marker.setMap(map);
+
+      //고칠 부분 : string이라서 html 형식으로 직접 써줘야 됨
+      const infowindow = new kakao.maps.InfoWindow({
+        content: `<s.iwContent><s.iwText>${element.name}</s.iwText></s.iwContent>`
+      })
+      
+      kakao.maps.event.addListener(marker, 'mouseover', function() {
+        // 마커에 마우스오버 이벤트가 발생하면 인포윈도우를 마커위에 표시합니다
+          infowindow.open(map, marker);
+      });
+      kakao.maps.event.addListener(marker, 'mouseout', function() {
+        // 마커에 마우스아웃 이벤트가 발생하면 인포윈도우를 제거합니다
+        infowindow.close();
+      });
     });
 
     setIsLoading(false);

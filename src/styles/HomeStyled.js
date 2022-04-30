@@ -12,9 +12,9 @@ export const backgroundContainer = styled.div`
 
 export const mainContainer = styled.div`
   position: relative;
-  width: 90%;
+  width: 75%;
   height: 80%;
   background-color: #fff;
   border-radius: 18px;
-  box-shadow: 5px 5px 2px gray;
+  box-shadow: 0 0 8px gray;
 `;
