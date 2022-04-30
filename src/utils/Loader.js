@@ -2,13 +2,13 @@
  * 로딩 시 나타라는 동그라미
  */
 import React from "react";
-import Loader from "react-loader-spinner"
+import { TailSpin } from "react-loader-spinner"
 import LoaderContainer from '../styles/LoaderStyled';
 import { mainColor } from "../styles/GlobalStyle";
 
 export default () => (
   <LoaderContainer>
-    <Loader 
+    <TailSpin 
       type="Oval"
       color={mainColor}
       height={80}

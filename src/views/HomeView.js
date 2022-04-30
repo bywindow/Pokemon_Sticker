@@ -5,6 +5,9 @@
 import React, { useEffect, useState } from "react";
 import Header from "../utils/Header";
 import * as s from "../styles/HomeStyled";
+import KaKaoMap from '../utils/map/KakaoMap';
+
+import { sampleStore } from '../data/SampleData';
 
 const HomeView = ({
 
@@ -27,7 +30,7 @@ const HomeView = ({
       <s.backgroundContainer windowWidth={width} windowHeight={height}>
         
         <s.mainContainer>
-          
+          <KaKaoMap stores={sampleStore}></KaKaoMap>
         </s.mainContainer>
       </s.backgroundContainer>
     </React.StrictMode>

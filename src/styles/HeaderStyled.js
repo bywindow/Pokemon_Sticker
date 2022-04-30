@@ -8,7 +8,6 @@ export const outsideStyle = styled.div`
     width: 100%;
     height: 95px;
     background-color: #fff;
-    border-bottom: 3px solid ${mainColor};
     align-items: center;
     justify-content: center;
 `;

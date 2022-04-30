@@ -15,6 +15,6 @@ export const mainContainer = styled.div`
   width: 90%;
   height: 80%;
   background-color: #fff;
-  border: 1px solid #000;
-  border-radius: 3px;
+  border-radius: 18px;
+  box-shadow: 5px 5px 2px gray;
 `;
