@@ -9,5 +9,5 @@ const StoreView = ({ isOpen }) => {
     </ReactModal>
   );
 };
-​
+
 export default StoreView;
