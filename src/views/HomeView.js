@@ -6,11 +6,14 @@ import React, { useEffect, useState } from "react";
 import Header from "../utils/Header";
 import * as s from "../styles/HomeStyled";
 import KaKaoMap from '../utils/map/KakaoMap';
+import Loader from "../utils/Loader";
 
 import { sampleStore } from '../data/SampleData';
 
 const HomeView = ({
-
+  isLoading,
+  state,
+  getStoreInfo,
 }) => {
   // console.log("HomeView");
   const [width, setWidth] = useState(window.innerWidth);
@@ -27,12 +30,16 @@ const HomeView = ({
   return(
     <React.StrictMode>
       <Header />
-      <s.backgroundContainer windowWidth={width} windowHeight={height}>
+      {isLoading ? (
+        <Loader></Loader>
+      ) : (
+        <s.backgroundContainer windowWidth={width} windowHeight={height}>
         
-        <s.mainContainer>
-          <KaKaoMap stores={sampleStore}></KaKaoMap>
-        </s.mainContainer>
-      </s.backgroundContainer>
+          <s.mainContainer>
+            <KaKaoMap stores={sampleStore} getInfo={getStoreInfo}></KaKaoMap>
+          </s.mainContainer>
+        </s.backgroundContainer>
+      )}
     </React.StrictMode>
   );
 };
