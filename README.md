@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# 🗺️ 띠부띠부씰 프로젝트 
+내가 찾고 있는 띠부띠부씰👽은 어디에 많이 출몰할까❓ 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📍 프로젝트 계획 이유
+내가 찾고 있는 띠부띠부씰은 어느 편의점에서 많이 출몰했는지 찾을 수 있는 웹페이지 이다.  
+내가 있는 편의점에서 나온 띠부띠부씰 종류를 확인할 수 있다. 
 
-## Available Scripts
+"띠부띠부씰"은 "띠고 부치고 띠고 부치치는 씰"의 앞글자를 따서 만든 조어이다.   
+현재 포켓몬 빵 열풍의 기폭제 역할을 한 "띠부띠부씰"은 희귀씰의 경우 중고거래시 4~5만원에도 거래되고 있는 기현상이 나타나고 있다. 😂
 
-In the project directory, you can run:
+## 🔑 프로젝트 실행 방법 
+``` bash
+추가 예정
+```
+## 🖥️ 실행 예시 (Prototype)
+![실행예시1](./image/%EC%8B%A4%ED%96%89%EC%98%88%EC%8B%9C1.PNG)
+![실행예시2](./image/%EC%8B%A4%ED%96%89%EC%98%88%EC%8B%9C2.PNG)
+![실행예시3](./image/%EC%8B%A4%ED%96%89%EC%98%88%EC%8B%9C3.PNG)
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ❤️ 출처
+https://namu.wiki/w/%EB%9D%A0%EB%B6%80%EB%9D%A0%EB%B6%80%EC%94%B0   
+https://textnews.co.kr/entry/%ED%8F%AC%EC%BC%93%EB%AA%AC%EB%B9%B5-%ED%8E%B8%EC%9D%98%EC%A0%90-%ED%8C%8C%EB%8A%94%EA%B3%B3-%EC%8A%A4%ED%8B%B0%EC%BB%A4-%EB%9D%A0%EB%B6%80%EB%9D%A0%EB%B6%80%EC%94%B0-%EC%8B%9C%EC%84%B8%ED%91%9C-%EA%B0%80%EA%B2%A9-%EC%B4%9D%EC%A0%95%EB%A6%AC
