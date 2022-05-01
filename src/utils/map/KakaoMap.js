@@ -13,7 +13,7 @@ const KaKaoMap = ({
   getInfo,
   }) => {
     // 데이터의 위도 경도를 지도 쓸 수 있도록 수정
-    const [state, setState] = useState(stores);
+    const [state, setState] = useState(stores[0]);
     const [isOpen, setIsOpen] = useState(false);
     const [info, setInfo] = useState([]);
 
@@ -34,7 +34,7 @@ const KaKaoMap = ({
         >
           {state.map((item) => (
             <MapMarker
-              key={`${item.name}-${item.latlng}`}
+              key={`${item.name}-${item.id}`}
               position={{
                 lat: item.latitude,
                 lng: item.longitude,

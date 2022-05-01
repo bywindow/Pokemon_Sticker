@@ -25,7 +25,7 @@ const HomeView = ({
   useEffect(() => {
     window.addEventListener("resize", updateDimensions);
     return () => window.removeEventListener("resize", updateDimensions);
-  }, []);
+  }, [state]);
 
   return(
     <React.StrictMode>
@@ -36,7 +36,7 @@ const HomeView = ({
         <s.backgroundContainer windowWidth={width} windowHeight={height}>
         
           <s.mainContainer>
-            <KaKaoMap stores={sampleStore} getInfo={getStoreInfo}></KaKaoMap>
+            <KaKaoMap stores={state} getInfo={getStoreInfo}></KaKaoMap>
           </s.mainContainer>
         </s.backgroundContainer>
       )}

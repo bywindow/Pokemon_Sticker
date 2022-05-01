@@ -19,9 +19,9 @@ const HomeModel = ({}) => {
     } catch(e) {
       console.log("error", e);
     } finally {
-      setState(result);
+      // console.log(result.data);
+      setState([...state, result.data]);
       setIsLoading(false);
-      console.log(result);
     }
   };
 
