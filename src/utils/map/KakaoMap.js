@@ -56,7 +56,7 @@ const KaKaoMap = ({
         <Modal
           isOpen={isOpen}
           onRequestClose={() => setIsOpen(false)}
-          style={{content: mainContainer}}
+          style={mainContainer}
         >
           
         </Modal>
