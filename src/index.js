@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// import reportWebVitals from './reportWebVitals';
+import ReactModal from 'react-modal';
 
+// import reportWebVitals from './reportWebVitals';
+ReactModal.setAppElement('#root');
 ReactDOM.render(<App />, document.getElementById('root'));
 
 

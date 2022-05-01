@@ -1,68 +1,67 @@
 /* global kakao */
 import React, { useEffect, useState } from "react";
 import * as s from "../../styles/MapStyles";
-import Loader from '../Loader';
+import { Map, MapMarker } from "react-kakao-maps-sdk";
+import { Link } from "react-router-dom";
+import Modal from "react-modal";
+import { mainContainer } from "../../styles/StoreStyles";
 
 const { kakao } = window;
 
-const KaKaoMap = ({stores}) => {
+const KaKaoMap = ({
+  stores,
+  getInfo,
+  }) => {
+    // 데이터의 위도 경도를 지도 쓸 수 있도록 수정
+    const [state, setState] = useState(stores);
+    const [isOpen, setIsOpen] = useState(false);
+    const [info, setInfo] = useState([]);
 
-  const [isLoading, setIsLoading] = useState(true);
-  // 데이터의 위도 경도를 지도 쓸 수 있도록 수정
-  const [state, setState] = useState(stores.map((item) => {
-    return {...item, latlng: new kakao.maps.LatLng(item.latitude, item.longitude)}
-  }));
-
-  useEffect(() => {
-    let container = document.getElementById("map");
-
-    let options = {
-      center: new window.kakao.maps.LatLng(37.50459286221182, 127.04900473306553),
-      level: 3,
-    }
-
-    const map = new window.kakao.maps.Map(container, options);
-
-    //marker image
-    const imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
-
-    state.forEach((element) => {
-      const imageSize = new kakao.maps.Size(24, 35);
-      const markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
-      const marker = new kakao.maps.Marker({
-        map: map,
-        position: element.latlng,
-        image: markerImage,
-      })
-
-      marker.setMap(map);
-
-      //고칠 부분 : string이라서 html 형식으로 직접 써줘야 됨
-      const infowindow = new kakao.maps.InfoWindow({
-        content: `<s.iwContent><s.iwText>${element.name}</s.iwText></s.iwContent>`
-      })
-      
-      kakao.maps.event.addListener(marker, 'mouseover', function() {
-        // 마커에 마우스오버 이벤트가 발생하면 인포윈도우를 마커위에 표시합니다
-          infowindow.open(map, marker);
-      });
-      kakao.maps.event.addListener(marker, 'mouseout', function() {
-        // 마커에 마우스아웃 이벤트가 발생하면 인포윈도우를 제거합니다
-        infowindow.close();
-      });
-    });
-
-    setIsLoading(false);
-  }, [state]);
-
-  return (
-    <s.mapContainer>
-      {isLoading && (
-        <Loader />
-      )}
-      <s.mapView id="map"></s.mapView>
-    </s.mapContainer>
-  )
+    return (
+      <>
+        <Map // 지도를 표시할 Container
+          center={{
+            // 지도의 중심좌표
+            lat: 37.5038134,
+            lng: 127.044811,
+          }}
+          style={{
+            // 지도의 크기
+            width: "100%",
+            height: "100%",
+          }}
+          level={3} // 지도의 확대 레벨
+        >
+          {state.map((item) => (
+            <MapMarker
+              key={`${item.name}-${item.latlng}`}
+              position={{
+                lat: item.latitude,
+                lng: item.longitude,
+              }} // 마커를 표시할 위치
+              image={{
+                src: "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png", // 마커이미지의 주소입니다
+                size: {
+                  widht: 24,
+                  height: 35
+                }, // 마커이미지의 크기입니다
+              }}
+              title={item.name} // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+              clickable={true}
+              onClick={() => setIsOpen(true)}
+            />
+          ))}
+        </Map>
+        
+        <Modal
+          isOpen={isOpen}
+          onRequestClose={() => setIsOpen(false)}
+          style={{content: mainContainer}}
+        >
+          
+        </Modal>
+      </>
+    )
 }
 
 export default KaKaoMap;

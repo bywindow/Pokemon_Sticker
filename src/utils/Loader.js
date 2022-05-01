@@ -6,14 +6,18 @@ import { TailSpin } from "react-loader-spinner"
 import LoaderContainer from '../styles/LoaderStyled';
 import { mainColor } from "../styles/GlobalStyle";
 
-export default () => (
-  <LoaderContainer>
-    <TailSpin 
-      type="Oval"
-      color={mainColor}
-      height={80}
-      width={80}
-      timeout={10000}
-    />
-  </LoaderContainer>
-);
+function Loader() {
+  return (
+    <LoaderContainer>
+      <TailSpin 
+        type="Oval"
+        color={mainColor}
+        height={80}
+        width={80}
+        timeout={10000}
+      />
+    </LoaderContainer>
+  );
+};
+
+export default Loader;
